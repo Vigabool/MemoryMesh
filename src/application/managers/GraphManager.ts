@@ -1,6 +1,8 @@
 // src/application/managers/GraphManager.ts
 
-import {BaseManager, GraphOperations} from '@application/index.js';
+// Import BaseManager directly to avoid circular dependency
+import {BaseManager} from './base/BaseManager.js';
+import {GraphOperations} from '@application/operations/index.js';
 import type {
     MetadataAddition,
     MetadataDeletion,

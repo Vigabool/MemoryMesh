@@ -1,0 +1,13 @@
+{
+  "name": "memorymesh-vigvault-integration",
+  "version": "1.0.0",
+  "description": "Integration between MemoryMesh and VigVault",
+  "main": "buildKnowledgeGraph.js",
+  "scripts": {
+    "build-graph": "node buildKnowledgeGraph.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

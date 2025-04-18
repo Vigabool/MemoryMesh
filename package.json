@@ -6,7 +6,7 @@
   "author": "CheMiguel23",
   "homepage": "https://github.com/CheMiguel23/memorymesh",
   "bugs": "https://github.com/CheMiguel23/memorymesh/issues",
-  "type": "module",
+  "type": "commonjs",
   "main": "dist/index.js",
   "bin": {
     "memorymesh": "./dist/index.js"
@@ -18,8 +18,8 @@
     "build": "tsc && tsc-alias && shx chmod +x dist/*.js && copyfiles -u 1 src/data/schemas/*.json src/data/*.json dist/",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "start": "ts-node --esm src/index.ts",
-    "start:claude": "ts-node --esm src/index.ts",
+    "start": "ts-node src/index.ts",
+    "start:claude": "ts-node src/index.ts",
     "start:prod": "node dist/index.js"
   },
   "dependencies": {

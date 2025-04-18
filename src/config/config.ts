@@ -1,9 +1,10 @@
 // src/config/config.ts
 
 import path from 'path';
-import {fileURLToPath} from 'url';
+import fs from 'fs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// Use __dirname which is available in CommonJS mode
+const moduleDirectory = __dirname;
 
 interface ServerConfig {
     NAME: string;
@@ -36,9 +37,9 @@ export const CONFIG: Config = {
 
     PATHS: {
         /** Path to schema files directory. */
-        SCHEMAS_DIR: path.join(__dirname, '..', 'data', 'schemas'),
+        SCHEMAS_DIR: path.join(moduleDirectory, '..', 'data', 'schemas'),
         /** Path to the memory JSON file. */
-        MEMORY_FILE: path.join(__dirname, '..', 'data', 'memory.json'),
+        MEMORY_FILE: path.join(moduleDirectory, '..', 'data', 'memory.json'),
     },
 
     SCHEMA: {

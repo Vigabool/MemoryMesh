@@ -2,7 +2,8 @@
 
 import type {IStorage} from '@infrastructure/index.js';
 import {JsonLineStorage} from '@infrastructure/index.js';
-import {ManagerFactory} from '@application/index.js';
+// Import directly to avoid circular dependency
+import {ManagerFactory} from '../ManagerFactory.js';
 
 /**
  * Base class that handles initialization and common functionality

@@ -1,12 +1,11 @@
 // src/core/managers/ManagerFactory.ts
 
-import {
-    NodeManager,
-    EdgeManager,
-    MetadataManager,
-    SearchManager,
-    TransactionManager
-} from '@application/index.js';
+// Import directly to avoid circular dependencies
+import {NodeManager} from './NodeManager.js';
+import {EdgeManager} from './EdgeManager.js';
+import {MetadataManager} from './MetadataManager.js';
+import {SearchManager} from './SearchManager.js';
+import {TransactionManager} from './TransactionManager.js';
 import type {IStorage} from '@infrastructure/index.js';
 import type {
     INodeManager,
@@ -14,7 +13,7 @@ import type {
     IMetadataManager,
     ISearchManager,
     ITransactionManager
-} from '@application/index.js';
+} from './interfaces/index.js';
 
 /**
  * Factory class responsible for creating instances of various manager classes
